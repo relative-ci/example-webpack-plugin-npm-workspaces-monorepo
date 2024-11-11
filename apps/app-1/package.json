@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
-    "build": "RELATIVE_CI_KEY=APP_1_RELATIVE_CI_KEY webpack --mode production",
+    "build": "RELATIVE_CI_KEY=$APP_1_RELATIVE_CI_KEY webpack --mode production",
     "start": "webpack serve --mode development",
     "test": "echo \"Error: no test\" && exit 0"
   },
