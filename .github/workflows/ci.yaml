@@ -27,4 +27,6 @@ jobs:
 
       # Build workspaces
       - run: npm run build
-
+        env:
+          APP_1_RELATIVE_CI_KEY: ${{ secrets.APP_1_RELATIVE_CI_KEY }}
+          APP_2_RELATIVE_CI_KEY: ${{ secrets.APP_2_RELATIVE_CI_KEY }}
