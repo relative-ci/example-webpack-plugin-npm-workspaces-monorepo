@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent');
 
 const packageInfo = require('./package.json');
 
@@ -50,6 +51,7 @@ module.exports = {
       filename: '[name].bundle.[contenthash].css',
       chunkFilename: '[name].chunk.[contenthash].css',
     }),
+    new RelativeCiAgentWebpackPlugin(),
   ],
   devServer: {
     historyApiFallback: true,
